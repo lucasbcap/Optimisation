@@ -1,0 +1,6 @@
+données : Ensemble de points
+
+espace de recherche : Cercle
+
+critère à optimiser : Le perimetre du cercle a des points confondue ou d'une distance proche
+donc la somme des distance entre un points et le perimetre du cercle
