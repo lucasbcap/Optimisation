@@ -1,4 +1,4 @@
-package com.example.tp;
+package com.example.tp1;
 
 public interface Solution {
 

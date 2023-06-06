@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="TP" options="--add-exports java.datatransfer/java.awt=com.example.tp" />
+      <module name="TP" options="" />
     </option>
   </component>
 </project>

@@ -30,6 +30,11 @@ public class Cercle {
         this.rayon = r;
     }
 
+    public Cercle(Double[] tab) {
+        this.centre = new Point2D(tab[0], tab[1]);
+        this.rayon = tab[2];
+    }
+
 
     public double getX() {
         return this.centre.getX();
@@ -37,6 +42,10 @@ public class Cercle {
 
     public double getY() {
         return this.centre.getY();
+    }
+
+    public Point2D getCentre() {
+        return centre;
     }
 
     public double getRayon() {

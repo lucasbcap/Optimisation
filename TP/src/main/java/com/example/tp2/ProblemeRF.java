@@ -48,7 +48,11 @@ public class ProblemeRF {
      * @return l'erreur moyenne commise
      */
     public double evaluer(Cercle c) {
-
+        double resultat = 0;
+        for(int i=0;i<this.points.size();i++){
+            resultat += Math.abs(this.points.get(i).distance(c.getCentre())-c.getRayon());
+        }
+        return resultat;
     }
 
 
