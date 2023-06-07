@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * represente un ensemble de points 2D
  */
-public class ProblemeRF {
+public class ProblemeCercles {
 
     /**
      * donnees sont un ensemble de point 2D
@@ -18,7 +18,12 @@ public class ProblemeRF {
     /**
      * generateur de points
      */
-    Generateur generateur;
+    Generateur generateur1;
+
+    /**
+     * generateur de points
+     */
+    Generateur generateur2;
 
     /**
      * construit un ensemble de points 2D
@@ -26,14 +31,16 @@ public class ProblemeRF {
      * @param nb  nombre de points
      * @param gen le generateur de points
      */
-    public ProblemeRF(int nb, Generateur gen) {
+    public ProblemeCercles(int nb, Generateur gen1,Generateur gen2) {
         // copie generateur
-        this.generateur = gen;
+        this.generateur1 = gen1;
+        this.generateur2 = gen2;
 
         // genere les points
         this.points = new ArrayList<>();
         for (int i = 0; i < nb; i++) {
-            points.add(gen.getPoint());
+            points.add(gen1.getPoint());
+            points.add(gen2.getPoint());
         }
     }
 
@@ -47,7 +54,9 @@ public class ProblemeRF {
     public double evaluer(Cercle c) {
         double resultat = 0;
         for(int i=0;i<this.points.size();i++){
-            resultat += Math.abs(this.points.get(i).distance(c.getCentre())-c.getRayon());
+            double cache = Math.abs(this.points.get(i).distance(c.getCentre())-c.getRayon());
+            if(cache<200)
+            resultat += cache;
         }
         return resultat;
     }

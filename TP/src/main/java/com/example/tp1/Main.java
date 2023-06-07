@@ -33,6 +33,9 @@ public class Main {
             y0= y0 - alpha* (Fonction2D.Fonction2D(x0,y0+dx)-Fonction2D.Fonction2D(x0,y0))/dx;
         }
         System.out.println("x ="+x0+" ------ y ="+y0+" ----  f(x)="+ Fonction2D.Fonction2D(x0,y0));
+
+        Descente d = new Descente(new Fonction1D());
+        System.out.println(d.iterer(new Valeur1D(),100).getX());
     }
 
 

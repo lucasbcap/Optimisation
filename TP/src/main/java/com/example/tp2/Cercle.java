@@ -1,9 +1,6 @@
 package com.example.tp2;
 
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-
 public class Cercle {
 
     /**
